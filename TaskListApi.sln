@@ -1,28 +1,26 @@
+#1.
+Using System.ComponentModel.DataAnnoations;
+namespace TasksListAPi.Models;
+Public class TaskItem{
+[key]
+public int ID {get; ste;}
+[Required]
+[MaxLwngth(100)]
+Public Strinfg title {get; set;} =string.Empty;
+Public bool IsComplete {get; set;}= false;
+Public DateTime CreatedAT{get; set;}
+}
+#2.
+Using System.ComponentModel.DataAnnoations
+namespace TasksListAPi.Models;
+public clas CreateTaskRequest{
+[Required(ErrorMessage = "Title is required.")]
+[MaxLength(100, ErrowrMessage = "Title cannot be longer than 100 characters.")]
+public String Title {get; set;} =string.EMpty ;
+}
+public Class UpdateTaskRequest {
+[Required(ErrorMessage = "Title is required.")]
+[MaxLength(100, ErrowrMessage = "Title cannot be longer than 100 characters.")]
+public String Title {get; set;} =string.EMpty ;}
 
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskListApi", "TaskListApi\TaskListApi.csproj", "{A1E4C1F1-1111-4B2C-9A11-000000000001}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskListApi.Tests", "TaskListApi.Tests\TaskListApi.Tests.csproj", "{A1E4C1F1-1111-4B2C-9A11-000000000002}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A1E4C1F1-1111-4B2C-9A11-000000000001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A1E4C1F1-1111-4B2C-9A11-000000000001}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A1E4C1F1-1111-4B2C-9A11-000000000001}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A1E4C1F1-1111-4B2C-9A11-000000000001}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A1E4C1F1-1111-4B2C-9A11-000000000002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A1E4C1F1-1111-4B2C-9A11-000000000002}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A1E4C1F1-1111-4B2C-9A11-000000000002}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A1E4C1F1-1111-4B2C-9A11-000000000002}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-EndGlobal
+
